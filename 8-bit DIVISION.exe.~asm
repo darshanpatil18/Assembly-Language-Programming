@@ -1,0 +1,23 @@
+DATA SEGMENT
+NUM1 DB 19H,
+NUM2 DB 0BCH
+QUO DB 1 DUP(0)
+REM DB 1 DUP(0)
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE,DS:DATA
+START: MOV AX,DATA
+MOV DS,AX
+MOV AL,NUM1 ;Move the Dividend to AL
+MOV AH,0H
+DIV NUM2
+; Zero extended for 16 bit/8 bit division
+; Perform the Division operation
+MOV QUO,AL ; Store the quotient to AL
+MOV REM,AH ;Store the reminder to AH
+MOV AH,4CH
+INT 21H
+CODE ENDS
+END START
+
+
