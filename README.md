@@ -1,0 +1,2 @@
+# Assembly-Language-Programming
+This repository contains all the programs written in the Assembly Language Programming. These programs have been compiled in emu8086 software. The assembly level programming 8086 is based on the memory registers. A Register is the main part of the microprocessors and controllers which are located in the memory that provides a faster way of collecting and storing the data.
